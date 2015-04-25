@@ -1,0 +1,7 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "inquiryID": 3,
+    "description": "gadfbe",
+    "suggestion": "dgryujkth"
+}
+'  "http://localhost:9000/doctor/inquiry/report?uid=2&sessionkey=fadf"

@@ -1,0 +1,8 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "phoneNum": "1245134677",
+    "password":"MTIzNDU2",
+    "phase":"\u5907\u5b55",
+    "deviceType":1
+}
+'  "http://115.159.49.31:9000/user/register"

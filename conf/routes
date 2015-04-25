@@ -1,0 +1,80 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page - we use the @controllers syntax here so that the router knows we are referring to a class. In turn it
+# will call on the GlobalSettings.getController method to resolve the actual controller instance.
+GET         /                                              @controllers.Application.index
+GET         /room                                          @controllers.Application.receptRoom(username: String ?= null)
+GET         /test/add_doctor                               @controllers.Application.addDoctor
+GET         /test/add_patient                              @controllers.Application.addPatients
+GET         /test/inqueries                                @controllers.Application.testQuery
+POST        /test/push                                     @controllers.InquiryController.pushInquiryTest
+GET         /test/query/:tag                               @controllers.InquiryController.queryInquiry(tag)
+POST        /inquiry/post                                  @controllers.InquiryController.pushInquiry(uid: Long, sessionkey: String)
+GET         /user/:uid/inquiry/:inqid/photo/:file          @controllers.FileController.getInquiryPhoto(uid: Long, inqid: Long, file: String)
+GET         /doctor/:did/plate/:file                       @controllers.FileController.getPlatePhoto(did: Long, file: String)
+GET         /doctor/:did/license/:file                     @controllers.FileController.getLicensePhoto(did: Long, file: String)
+GET         /doctor/:did/avatar/:file                      @controllers.FileController.getDoctorAvatar(did: Long, file: String)
+GET         /user/:did/avatar/:file                        @controllers.FileController.getUserAvatar(did: Long, file: String)
+GET         /chat/:id/image/:file                          @controllers.FileController.getChatImage(id: String, file: String)
+GET         /chat/:id/audio/:file                          @controllers.FileController.getChatAudio(id: String, file: String)
+POST        /doctor/volunteer/list                         @controllers.DoctorController.getVolunteerDoctors(uid: Long,sessionkey: String, page: Integer, limit: Integer)
+#POST        /doctor/login                                @controllers.DoctorController.doctorLogin
+POST        /user/login                                    @controllers.UserController.userLogin
+GET         /inquiry/:inqid/detail                         @controllers.InquiryController.getInquiryDetail(uid: Long, sessionkey: String, inqid: Long)
+POST        /inquiry/recept                                @controllers.InquiryController.receptInquiry(uid: Long, sessionkey: String)
+POST        /doctor/test/register                          @controllers.DoctorController.doctorTestRegister
+POST        /user/register                                 @controllers.UserController.userRegister
+GET         /inquiry/list                                  @controllers.InquiryController.getInquiryList(uid: Long,sessionkey: String, page: Integer, limit: Integer)
+GET         /doctor/register/validate/:phone               @controllers.DoctorController.getValidateCode(phone: String)
+POST        /register/validate/code                        @controllers.UserController.validateCode
+POST        /doctor/register                               @controllers.DoctorController.doctorRegister
+POST        /doctor/login                                  @controllers.DoctorController.doctorLogin
+POST        /doctor/information/update                     @controllers.DoctorController.updateDoctorInfo(uid: Long, sessionkey: String)
+POST        /doctor/worktime/update                        @controllers.DoctorController.updateWorkTime(uid: Long, sessionkey: String)
+GET         /doctor/worktime/get                           @controllers.DoctorController.getWorkTime(uid: Long, sessionkey: String)
+POST        /doctor/avatar/upload                          @controllers.DoctorController.doctorUploadAvatar(uid: Long, sessionkey: String)
+POST        /user/avatar/upload                            @controllers.UserController.userUploadAvatar(uid: Long, sessionkey: String)
+POST        /doctor/inquiry/report                         @controllers.DoctorController.reportInquiry(uid: Long, sessionkey: String)
+POST        /doctor/extra/information/update               @controllers.DoctorController.updateDoctorExtraInfo(uid: Long, sessionkey: String)
+POST        /doctor/level/authen                           @controllers.DoctorController.doctorAuthenticate(uid: Long, sessionkey: String)
+POST        /doctor/servingfee/update                      @controllers.DoctorController.updateDoctorServeFee(uid: Long, sessionkey: String)
+POST        /doctor/reminder/add                           @controllers.DoctorController.addReminder(uid: Long, sessionkey: String)
+POST        /doctor/reminder/update                        @controllers.DoctorController.updateReminder(uid: Long, sessionkey: String)
+POST        /doctor/reminder/delete                        @controllers.DoctorController.deleteReminder(uid: Long, sessionkey: String)
+GET         /doctor/reminder/get                           @controllers.DoctorController.getReminder(uid: Long, sessionkey: String)
+GET         /doctor/review/record/:id                      @controllers.DoctorController.getUserRecords(id: Long, uid: Long, sessionkey: String)
+GET         /doctor/friends/get                            @controllers.DoctorController.getFriendsList(uid: Long, sessionkey: String, page: Integer, limit: Integer)
+GET         /doctor/orders/get                             @controllers.DoctorController.getOrderList(uid: Long, sessionkey: String, page: Integer, limit: Integer)
+GET         /doctor/user/:phone/exist                      @controllers.DoctorController.getUserUseingThisPhone(phone: String,uid: Long, sessionkey: String)
+GET         /doctor/friends/health/records                 @controllers.DoctorController.getFriendsRecord(uid: Long, sessionkey: String)
+POST        /doctor/friend/:fid/health/record              @controllers.DoctorController.getFriendRecord(fid: Long, uid: Long, sessionkey: String)
+POST        /doctor/custom/sms/send                        @controllers.DoctorController.sendCustomSMS(uid: Long, sessionkey: String)
+POST        /doctor/clientID/bind                          @controllers.DoctorController.bindClientID(uid: Long, sessionkey: String)
+GET         /doctor/logout                                 @controllers.DoctorController.logout(uid: Long, sessionkey: String)
+POST        /im/doctor/send                                @controllers.IMChatController.doctorPostChat(uid: Long, sessionkey: String)
+POST        /im/user/send                                  @controllers.IMChatController.userPostChat(uid: Long, sessionkey: String)
+POST        /doctor/password/reset                         @controllers.DoctorController.doctorResetPassword(uid: Long, sessionkey: String)
+POST        /user/password/reset                           @controllers.UserController.userResetPassword(uid: Long, sessionkey: String)
+POST        /doctor/phone/password/reset                   @controllers.DoctorController.doctorResetPasswordByPhone
+POST        /user/phone/password/reset                     @controllers.UserController.userResetPasswordByPhone
+POST        /user/expert/get                               @controllers.UserController.getExpertDoctor(uid: Long, sessionkey: String, page:Integer, limit: Integer)
+POST        /user/health/record/add                        @controllers.UserController.addHealthRecord(uid: Long, sessionkey: String)
+POST        /user/health/record/get                        @controllers.UserController.getHealthRecords(uid: Long, sessionkey: String)
+POST        /user/clientID/bind                            @controllers.UserController.bindClientID(uid: Long, sessionkey: String)
+POST        /user/info/update                              @controllers.UserController.updateUserInfo(uid: Long, sessionkey: String)
+POST        /user/basic/info/update                        @controllers.UserController.updateBasicInfo(uid: Long, sessionkey: String)
+POST        /user/suggestion/add                           @controllers.UserController.addSuggestion(uid: Long, sessionkey: String)
+POST        /user/mark/send                                @controllers.UserController.mark(uid: Long, sessionkey: String)
+GET         /user/logout                                   @controllers.UserController.logout(uid: Long, sessionkey: String)
+GET         /user/register/validate/:phone               @controllers.UserController.getValidateCode(phone: String)
+GET         /hello                                         @controllers.Application.hello
+GET         /next/:param                                   @controllers.Application.next(param: String)
+POST        /test/post                                     @controllers.Application.testPost()
+GET         /test/push                                     @controllers.IMChatController.testSinglePush
+GET         /mall/entry                                    @controllers.MallController.mallEntry(uid: Long, sessionkey: String)
+GET         /mall/commodity/:cid/summary                   @controllers.MallController.getCommoditySummary(cid: Long, uid: Long, sessionkey: String)
+GET         /mall/event/:eid/commodity/:cid/summary        @controllers.MallController.getCommoditySummaryInEvent(eid: Long, cid: Long, uid: Long, sessionkey: String)
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                                  controllers.Assets.at(path="/public", file)

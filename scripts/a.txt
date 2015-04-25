@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 440
+
+{"code":0,"message":"success","doctorInfos":[{"name":"张晓蕊","title":"副主任医师","department":"儿科","cellPhone":null,"hospital":"北京大学人民医院","achievement":"参与国家自然科学基金项目及多项院内科研及教学基金研究，在国家核心期刊及SCI杂志上发表了多篇中英文研究论著，多次荣获院、校、部级优秀教师称号，入选教育部青年英才计划。","level":3}]}HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 245
+
+{"code":0,"message":"success","records":[{"id":4,"category":"宝宝","subCategory":"奶量","value":80.0,"cycle":2,"recordDate":"2015-04-15"},{"id":5,"category":"宝宝","subCategory":"奶量","value":350.0,"cycle":2,"recordDate":"2015-04-16"}]}

@@ -1,0 +1,9 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "category":"\u5b9d\u5b9d",
+    "subCategory": "\u5976\u91cf",
+    "cycle": 2,
+    "recordDate":"2015-04-16",
+    "value": 150
+}
+'  "http://localhost:9000/user/health/record/add?uid=4&sessionkey=xxxxx"

@@ -1,0 +1,62 @@
+@(goods: dto.BaseCommodityInfo)
+<html>
+<head>
+<meta  charset="utf-8">
+<meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,uc-fitscreen=yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>商品详情</title>
+<meta http-equiv="Cache-Control" content="no-transform">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css">
+<script type="text/javascript" src="@routes.Assets.at("javascripts/zepto.min.js")"></script>
+<script type="text/javascript" src="@routes.Assets.at("javascripts/TouchSlide.1.1.js")"></script>
+</head>
+<body>
+<div class="list-article">
+    <!-- banner Start ================================ -->
+    <div id="focus" class="focus focus1">
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                    <li><a href="#"><img _src="images/list-show.jpg" /></a></li>
+                    <li><a href="#"><img _src="images/list-show.jpg" /></a></li>
+                    <li><a href="#"><img _src="images/list-show.jpg" /></a></li>
+                    <li><a href="#"><img _src="images/list-show.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        TouchSlide({ 
+            slideCell:"#focus",
+            titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+            mainCell:".bd ul", 
+            effect:"left", 
+            autoPlay:true,//自动播放
+            autoPage:true, //自动分页
+            switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+        });
+    </script>
+    <!-- banner End ================================ -->
+<div class="article-show">
+  <div class="divright"><s></s><p>分享</p></div>
+  <div class="shop_j">
+      <h3>@goods.description</h3>
+      <p><span>500</span>积分 = 50元</p>
+  </div>
+</div> 
+<div class="bijia">比价： @{goods.cmpTarget} @{goods.cmpPrice}元</div>
+    
+<div class="zdy_hd">
+   <a href="article-article.html"><span class="divright">&gt;</span>自定义订单</a> 
+</div>
+<div class="btn"><a href="#">马上兑换</a></div>
+</div>
+
+
+
+
+</body>
+</html>

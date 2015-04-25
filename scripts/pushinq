@@ -1,0 +1,7 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+[
+    "blue",
+    "spring",
+    "summer"
+]
+'  "http://localhost:9000/test/push"

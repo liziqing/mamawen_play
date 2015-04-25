@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0px; padding:0px; font-size:12px;font-family:"微软雅黑","黑体";color:#898989;line-height:24px; background:#FFF;}
+ul,li,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,ol,form{ margin:0px; padding:0px;}
+ul,li{ list-style:none}
+img{border:0px; padding:0px;}
+a{ color:#5c5c5c; text-decoration:none}
+a:hover{ color:#8e2239;}
+.clear{ clear:both;font-size:0px; line-height:0px}
+.divleft{ float:left}
+.divright{ float:right}
+.hidden{display:none;}
+section,header,footer{ display:block;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+
+*html{background-image:url(d); background-attachment:fixed;}
+
+
+body{ background:url(../images/body-bg.jpg) no-repeat center top; background-size:cover;}
+/*banner部分*/
+.focus{ width:100%; margin:0 auto; position:relative; overflow:hidden; background:rgba(233,238,242,0.4); padding-bottom:15px; height:}
+.focus .hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:25px; left:15%;  }
+.focus .hd ul{ display:inline-block; height:10px; padding:3px 5px; font-size:0; vertical-align:top;
+}
+.focus .hd ul li{ display:inline-block; width:10px; height:10px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#a2d8e0; margin:0 5px;  vertical-align:top; overflow:hidden;   }
+.focus .hd ul .on{ background:#d1ebef;  }
+
+
+#focus.focus1{ width:100%; margin:0 auto; position:relative; overflow:hidden; padding-bottom:0px; }
+#focus.focus1{ width:100%; margin:0 auto; position:relative; overflow:hidden; padding-bottom:0px; }
+#focus.focus1 .hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:15px; left:0px; text-align:center;  }
+
+.focus .bd{ position:relative; z-index:0; }
+.focus .bd li img{ width:100%; background:url(images/loading.gif) center center no-repeat;  }
+.focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
+/*banner部分 end*/
+
+.hot{ margin-top:20px; border-top:1px solid #8b97ae border-bottom:1px solid #8b97ae;}
+
+/*心意满满*/
+.xymm { background:rgba(255,255,255,0.3); padding-bottom:40px; margin-top:20px; margin-bottom:20px;}
+.xymm-t{ line-height:35px; font-size:20px; color:#FFF; padding:4.6875% 0;  width:92%; margin:0 auto;}
+.xymm-t s{ display:block; width:35px; height:35px; background:url(../images/icon.png) no-repeat; display:inline-block; vertical-align:middle; padding-right:10px; margin-left:5%;}
+.xymm-c{ width:92%; margin:0 auto;}
+.xymm-c ul{ overflow:hidden;}
+.xymm-c ul li{ width:48%; margin:1%; float:left; background:#ffffff;}
+.xymm-c ul li div{ padding:3%;}
+.xymm-c ul li h2{ font-size:20px; color:#999; line-height:30px; border-bottom:1px solid #707070; font-weight:normal; padding-bottom:10px;}
+.xymm-c ul li p{ font-size:28px; color:#52a5eb; line-height:40px;}
+.xymm-c ul li p span{ font-size:20px;}
+
+@media screen and (max-width:480px){
+.xymm-c ul li h2{ font-size:18px; line-height:30px;}
+.xymm-c ul li p{ font-size:24px; line-height:40px;}
+.xymm-c ul li p span{ font-size:18px;}
+	}
+@media screen and (min-width:320px) and (max-width:480px){
+.xymm-c ul li h2{ font-size:14px; line-height:20px;}
+.xymm-c ul li p{ font-size:18px; line-height:26px;}
+.xymm-c ul li p span{ font-size:14px;}
+	}
+	
+/*夜班有好礼*/
+
+/*抢购时间*/
+.list-tab{ overflow:hidden;}
+.list-tab li{ width:25%; text-align:center; float:left; }
+.list-tab li>div{ margin:0 1px; background:#1d305a;padding:15px 0; height:60px; color:#FFF;}
+.list-tab li.show>div{ background:#00ffff; color:#666666;}
+.list-tab li>div time{ font-size:20px; line-height:30px;}
+.list-tab li>div p{ font-size:18px; line-height:22px;}
+
+.list-show li{ margin-top:20px;}
+.list-img{ width:55%; float:left;}
+.list-p{ width:40%; float:left; color:#FFF; padding-left:5%; }
+.list-show li{ background:rgba(255,255,255,0.3); padding:20px 0; overflow:hidden;}	
+.list-p h3{ font-size:20px; margin:4% 0; line-height:24px;}
+.unline{ font-size:16px; text-decoration:line-through;}
+.jg{ font-size:20px; line-height:24px;}
+.jg span{ font-size:16px;}
+.list-p a{ display:inline-block; width:120px; height:40px; background:#11d1e2; line-height:40px; font-size:22px; text-align:center; margin-top:20px; color:#FFF;}
+.list-p a.gou{ background:#959595;}
+@media screen and (min-width:320px) and (max-width:480px){
+.list-p h3{ font-size:14px; margin:4% 0; line-height:16px;}
+.unline{ font-size:12px;}
+.jg{ font-size:20px; line-height:24px;}
+.jg span{ font-size:16px;}
+.list-p a{ display:inline-block; width:80px; height:30px; background:#11d1e2; line-height:30px; font-size:22px; text-align:center; margin-top:20px; color:#FFF;}
+}
+
+
+/*产品详情*/
+
+.article-show{ width:80%; margin:20px auto 0; border-bottom:1px solid #FFF; color:#FFF; overflow:hidden;}
+.article-show .divright s{ display:block; width:40px; height:46px; background:url(../images/icon.png) no-repeat 0px -36px; margin-bottom:10px;}
+.article-show .divright p{ font-size:18px;}
+.article-show .shop_j{ color:#FFF;}
+.article-show .shop_j h3{ font-size:24px; font-weight:normal; line-height:40px;}
+.article-show .shop_j p{ font-size:20px; line-height:40px;}
+.article-show .shop_j p span{ font-size:34px; line-height:40px;}
+
+.bijia{ width:80%; margin:0 auto; color:#FFF; font-size:20px; line-height:36px; margin-top:10px;}
+.zdy_hd{ font-size:20px; line-height:100px; padding:0 10%; background:rgba(255,255,255,0.2); overflow:hidden; margin-top:20px;}
+.zdy_hd a{ font-size:20px; line-height:100px; color:#FFF; display:block;}
+
+.dh{ display:block; background:#11d1e2; border-radius:5px; width:80%; margin:20px auto 0; line-height:60px; font-size:30px; text-align:center; color:#FFF;}
+
+
+@media screen and (min-width:320px) and (max-width:400px){
+.article-show .shop_j h3{ font-size:20px; font-weight:normal; line-height:30px;}
+.article-show .shop_j p{ font-size:16px; line-height:30px; margin-top:10px;}
+.article-show .shop_j p span{ font-size:24px; line-height:30px;}
+.bijia{ font-size:14px; line-height:30px;}
+.zdy_hd a{ line-height:60px;}
+}
+
+/*商品确认*/
+
+.porduct-img{ padding:20px 10%; background:rgba(255,255,255,0.20); overflow:hidden;}
+.por-l{ width:40%;}
+.por-r{ width:55%; padding-left:5%; color:#FFF;}
+.por-r h2{ font-size:24px; line-height:40px; margin-bottom:15px; padding-top:5%;}
+.por-r p{ font-size:20px; line-height:30px; margin-bottom:10px;}
+
+.porduct{padding:20px 10%; background:rgba(255,255,255,0.20); overflow:hidden; color:#FFF; margin-top:36px;}
+.porduct h2{ font-size:24px;}
+.porduct ul{ margin-top:15px;}
+.porduct ul li{ display:inline-block; width:92px; height:48px; font-size:20px; line-height:48px; margin:5px 10px 5px 0; border:1px solid #FFF; text-align:center;}
+.porduct ul li a{ color:#FFF;}
+.porduct ul li.color{ background:#11d1e2; border:1px solid #11d1e2;}
+
+.porduct3{ font-size:24px; color:#FFF; line-height:40px;padding:20px 10%; background:rgba(255,255,255,0.20); overflow:hidden; margin-top:40px;}
+.porduct3 span{ display:block; width:38px; height:38px; float:left; line-height:38px; text-align:center; color:#FFF;  border:1px solid #FFF;}
+.porduct3 span:first-child{ border-right:0px solid #FFF;}
+.porduct3 span:last-child{  border-left:0px solid #FFF; }
+.porduct3 input{ width:40px; height:40px; float:left;line-height:40px; text-align:center; color:#FFF; background:none; border:1px solid #FFF;}
+
+.btn a{ display:block; width:80%; height:70px; line-height:76px; text-align:center; border-radius:5px; background:#11d1e2; margin:20px auto; font-size:24px; color:#FFF;}
+@media screen and (min-width:320px) and (max-width:400px){
+.porduct h2{ font-size:18px;}
+.porduct ul{ width:110%;}
+.porduct ul li{ width:50px; height:24px; font-size:14px; line-height:24px;}
+.porduct3{ font-size:14px; }
+.porduct3 span{ display:block; width:30px; height:30px; float:left; line-height:30px; text-align:center; color:#FFF;  border:1px solid #FFF;}
+.porduct3 input{ width:32px; height:32px;line-height:32px;}
+.btn a{ height:50px; line-height:50px; font-size:20px;}
+}
+@media screen and (min-width:400px) and (max-width:500px){
+.porduct h2{ font-size:20px;}
+.porduct ul{ width:110%;}
+.porduct ul li{ width:70px; height:36px; font-size:18px; line-height:36px;}
+.porduct3{ font-size:18px; }
+.porduct3 span{ display:block; width:30px; height:30px; float:left; line-height:30px; text-align:center; color:#FFF;  border:1px solid #FFF;}
+.porduct3 input{ width:32px; height:32px;line-height:32px;}
+}
+
+/*订单详情*/
+.article{ padding:20px 10%; color:#FFF;  background:rgba(255,255,255,0.20); overflow:hidden; font-size:1rem; line-height:24px; margin-bottom:20px;}
+.article .divright{ margin-top:10px;}
+.article s{ display:block; width:26px; height:34px; background:url(../images/icon.png) no-repeat 0 -84px; float:left; margin-top:10px; margin-right:10px;}
+.dingdan{padding:20px 10%; background:rgba(255,255,255,0.20); overflow:hidden;}
+.porduct{overflow:hidden; }
+.por-l{ width:40%;}
+.por-r{ width:55%; padding-left:5%; color:#FFF;}
+.por-r h2{ font-size:24px; line-height:36px; margin-bottom:15px; padding-top:5%; font-weight:normal;}
+.por-r p{ font-size:20px; line-height:24px; margin-bottom:10px;}
+
+.peisong{ overflow:hidden; font-size:24px; color:#FFF; padding:20px 0; border-top:1px solid #FFF; margin-top:30px; line-height:30px;}
+.peisong span{ padding-left:20px; font-size:30px; line-height:30px;}
+
+
+.number{ font-size:24px; color:#FFF; line-height:40px;padding:20px 0; overflow:hidden; border-top:1px solid #FFF;border-bottom:1px solid #FFF;}
+.number span{ display:block; width:38px; height:38px; float:left; line-height:38px; text-align:center; color:#FFF;  border:1px solid #FFF; cursor:pointer;}
+.number span:first-child{ border-right:0px solid #FFF;}
+.number span:last-child{  border-left:0px solid #FFF; }
+.number input{ width:40px; height:40px; float:left;line-height:40px; text-align:center; color:#FFF; background:none; border:1px solid #FFF;}
+
+.dingdan textarea{ width:100%; height:80px; margin-top:30px; border:none;}
+
+.total{ text-align:center; font-size:24px; color:#FFF; margin:30px 0;}
+.total span{ font-size:30px;}
+@media screen and (min-width:320px) and (max-width:400px){
+.article{ font-size:12px; line-height:20px;}
+.article s{ margin-top:5px; margin-right:10px;}
+.por-r h2{ font-size:16px; line-height:30px;}
+.por-r p{ font-size:14px; line-height:18px;}
+.peisong{ font-size:16px;}
+.number{ font-size:18px; line-height:32px; }
+.number span{ display:block; width:30px; height:30px; float:left; line-height:30px; text-align:center; color:#FFF;  border:1px solid #FFF;}
+.number input{ width:32px; height:32px;line-height:32px;}
+.total{ font-size:16px; margin:20px 0;}
+.total span{ font-size:20px;}
+}

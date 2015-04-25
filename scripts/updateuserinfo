@@ -1,0 +1,7 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "phase":"\u5907\u5b55",
+    "lastMensDate":  "2015-03-13",
+    "mensCycle": 27
+}
+'  "http://localhost:9000/user/info/update?uid=12&sessionkey=xxxxx"

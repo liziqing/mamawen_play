@@ -1,0 +1,7 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "phoneNumber":"1245904677",
+    "password":"MTIzNDU2",
+    "deviceType": 1
+}
+'  "http://localhost:9000/user/login"

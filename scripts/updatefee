@@ -1,0 +1,11 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "freeServing": true,
+    "imgTxtDiagFee":100,
+    "phnDiagFee":  150,
+    "prvtDiagFee": 100,
+    "diagPlusFee": 100,
+    "voltrWeekday": 1,
+    "freeCount": 7
+}
+'  "http://localhost:9000/doctor/servingfee/update?uid=1&sessionkey=xxxxx"

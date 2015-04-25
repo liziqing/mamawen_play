@@ -1,0 +1,6 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "content": "\u5b8c\u7f8e\u4eba\u751f",
+    "cellPhone": "13661538076"
+}
+'  "http://localhost:9000/doctor/custom/sms/send?uid=2&sessionkey=fadf"

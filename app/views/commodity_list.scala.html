@@ -1,0 +1,76 @@
+@(events: List[dto.RushEventInfo], uid: Long, sessionkey: String)
+<html>
+<head>
+<meta  charset="utf-8">
+<meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,uc-fitscreen=yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>夜班有好礼</title>
+<meta http-equiv="Cache-Control" content="no-transform">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css">
+<script type="text/javascript" src="@routes.Assets.at("javascripts/zepto.min.js")"></script>
+
+</head>
+<body>
+<div class="list-tab">
+  <ul>
+      @for(i <- 0 until events.size){
+          @if(i == 0){
+            <li class="show">
+          } else {
+            <li>
+          }
+           <div><time>@events(i).startTime</time><p>即将开始</p></div></li>
+
+      }
+  </ul>
+</div>
+<div class="list-show">
+ @for(i<- 0 until events.size){
+     @if(i == 0){
+         <div  style="display:block">
+     }else{
+         <div style="display:none">
+     }
+     <ul>
+         @for(good<-events(i).commodities){
+             <li>
+             <div class="list-img"><img src="@good.thumbUrl" width="100%"></div>
+                 <div class="list-p">
+                     <h3>@good.name</h3>
+                     @if(good.priceType == 1){
+                     <p class="unline">原价：@{good.origPrice}积分</p>
+                     <p class="jg">@good.price<span>积分</span></p>
+                     } else {
+                         <p class="unline">原价：@{good.origPrice}元</p>
+                         <p class="jg">@good.price<span>元</span></p>
+                     }
+                     @if(good.stock > 0) {
+                         <a class="gou" href="@routes.MallController.getCommoditySummaryInEvent(events(i).eventID, good.cid, uid, sessionkey)">抢购</a>
+                     }else{
+                         <a class="gou" href="#">抢光了</a>
+                     }
+                     @if(good.stock > 999) {
+                         <span class="shengyu">充足</span>
+                     }else{
+                         <span class="shengyu">不多了</span>
+                     }
+                 </div>
+             </li>
+         }
+     </ul>
+ </div>
+ }
+</div>
+<script type="text/javascript">
+$(".list-tab li").click(function(){
+  $(".list-tab li").removeClass("show").eq($(this).index()).addClass("show");
+  $(".list-show").children("div").hide().eq($(this).index()).show();	
+	
+})
+
+</script>
+
+</body>
+</html>

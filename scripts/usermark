@@ -1,0 +1,9 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "doctorID":4,
+    "inquiryID":4,
+    "servingMark": 8,
+    "efftMark": 8,
+    "comment": "abcdefg"
+}
+'  "http://localhost:9000/user/mark/send?uid=3&sessionkey=xxxxx"

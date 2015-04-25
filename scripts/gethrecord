@@ -1,0 +1,6 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "category":"\u5b9d\u5b9d",
+    "subCategory": "\u8eab\u9ad8"
+}
+'  "http://115.159.49.31:9000/user/health/record/get?uid=3&sessionkey=xxxxx"

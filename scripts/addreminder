@@ -1,0 +1,13 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "title":"title",
+    "patientName": "Jack",
+    "content": "content",
+    "startDate":"2015-04-01",
+    "endDate":"2015-04-21",
+    "remindTime":"10:00:00",
+    "remindMe": false,
+    "doctorID": 1,
+    "userID": 1
+}
+'  "http://localhost:9000/doctor/reminder/add?uid=2&sessionkey=xxxxx"

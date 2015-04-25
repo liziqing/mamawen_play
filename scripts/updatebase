@@ -1,0 +1,8 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "name":"\u674e\u5cf0",
+    "department": "\u513f\u79d1",
+    "hospital": "\u5317\u4eac\u534f\u548c\u533b\u9662",
+    "title":"\u4e3b\u4efb\u533b\u5e08"
+}
+'  "http://localhost:9000/doctor/information/update?uid=1&sessionkey=xxxxx"

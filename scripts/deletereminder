@@ -1,0 +1,5 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "reminderID": 4
+}
+'  "http://localhost:9000/doctor/reminder/delete?uid=2&sessionkey=xxxxx"

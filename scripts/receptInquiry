@@ -1,0 +1,5 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "inquiryID": 4
+}
+'  "http://localhost:9000/inquiry/recept?uid=5&sessionkey=xxxx"

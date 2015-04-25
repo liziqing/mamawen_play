@@ -1,0 +1,6 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "phoneNumber":"13661538076",
+    "code": "786656"
+}
+'  "http://localhost:9000/register/validate/code"

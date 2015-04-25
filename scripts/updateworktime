@@ -1,0 +1,16 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+[
+    {
+        "weekday": 4,
+        "timeSegment":3
+    },
+    {
+        "weekday": 2,
+        "timeSegment":2
+    },
+    {
+        "weekday": 3,
+        "timeSegment":2
+    }
+]
+'  "http://localhost:9000/doctor/worktime/update?uid=2&sessionkey=xxxxx"

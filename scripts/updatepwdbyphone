@@ -1,0 +1,7 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "id":1,
+    "phoneNumber": "13795794599",
+    "newPassword":"MjQ2d3J5"
+}
+'  "http://localhost:9000/doctor/phone/password/reset?uid=1&sessionkey=xxxxx"

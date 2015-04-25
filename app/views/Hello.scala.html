@@ -1,0 +1,28 @@
+@(param: String)
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="@routes.Assets.at("javascripts/jquery-1.9.1.js")" type="text/javascript"></script>
+</head>
+<body>
+<h1 id="top">@param</h1>
+<p id="content">woo, letter</p>
+<form id="x">
+<input id="btn" type="button" value="Hello world!">
+</form>
+    <script type="text/javascript">
+        document.getElementById("btn" ).onclick = function(){
+            //window.location.href = "@routes.Application.next("NextPage")"
+            var form = $("#x")
+            form.attr({"action": "@routes.Application.testPost", "method":"post", "enctype":"multipart/form-data"})
+            var input = $("<input type='hidden'>");
+            input.attr({"name": "content"});
+            input.val($("#content" ).html());
+            form.append(input);
+            form.submit();
+        }
+    </script>
+</body>
+</html>

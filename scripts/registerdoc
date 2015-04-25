@@ -1,0 +1,16 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "phoneNumber":"13721961879",
+    "password":"MTIzNDU2",
+    "name":"Jack",
+    "department": "\u513f\u79d1",
+    "hospital": "\u4e0a\u6d77\u7b2c\u4e09\u4eba\u6c11\u533b\u9662",
+    "title":"\u4e3b\u4efb\u533b\u5e08",
+    "workTime":[
+        {
+            "weekday": 2,
+            "timeSegment": 3
+        }
+    ]
+}
+'  "http://localhost:9000/doctor/register"

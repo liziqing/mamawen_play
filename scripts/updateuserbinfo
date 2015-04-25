@@ -1,0 +1,7 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "phase":"\u5b55\u671f",
+    "name":"Quantin",
+    "nickname": "gggggg"
+}
+'  "http://localhost:9000/user/basic/info/update?uid=11&sessionkey=xxxxx"

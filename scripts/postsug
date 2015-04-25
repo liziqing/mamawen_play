@@ -1,0 +1,5 @@
+curl -v   --include    --header "Content-Type: application/json" --request POST --data '
+{
+    "content":"13795794599"
+}
+'  "http://localhost:9000/user/suggestion/add?uid=2&sessionkey=xxxxx"
